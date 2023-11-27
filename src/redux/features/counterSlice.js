@@ -29,10 +29,18 @@ export const counterSlice = createSlice({
       debugger;
       state.counter = state.counter - 1;
     },
+    //TODO: Own Action Increment by five and decrement by five
+    incrementfive: (state) => {
+      state.counter = state.counter + 5;
+    },
+    decrementfive: (state) => {
+      state.counter = state.counter - 5;
+    },
   },
 });
 
 console.log(counterSlice, "check what is in counter slice");
 //* now see in console there are two actions increment and decrement need to export that
-export const { increment, decrement } = counterSlice.actions;
+export const { increment, decrement, incrementfive, decrementfive } =
+  counterSlice.actions;
 export default counterSlice.reducer;

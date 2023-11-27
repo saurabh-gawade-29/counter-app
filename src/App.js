@@ -1,6 +1,11 @@
 import "./App.css";
 import { useDispatch, useSelector } from "react-redux";
-import { increment, decrement } from "./redux/features/counterSlice";
+import {
+  increment,
+  decrement,
+  incrementfive,
+  decrementfive,
+} from "./redux/features/counterSlice";
 
 //! Base Css
 const myStyle = {
@@ -67,6 +72,26 @@ function App() {
                   </button>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="my-2">
+          <div className="row">
+            <div className="col-12 col-sm-12 col-md-6 col-lg-6 d-grid my-2">
+              <button
+                className="btn btn-dark btn-block-primary"
+                onClick={() => dispatch(decrementfive())}
+              >
+                - 5
+              </button>
+            </div>
+            <div className="col-12 col-sm-12 col-md-6 col-lg-6 d-grid my-2">
+              <button
+                className="btn btn-dark btn-block-primary"
+                onClick={() => dispatch(incrementfive())}
+              >
+                + 5
+              </button>
             </div>
           </div>
         </div>
