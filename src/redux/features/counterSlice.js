@@ -36,11 +36,15 @@ export const counterSlice = createSlice({
     decrementfive: (state) => {
       state.counter = state.counter - 5;
     },
+    //TODO: make reset button
+    reset: (state) => {
+      state.counter = 0;
+    },
   },
 });
 
 console.log(counterSlice, "check what is in counter slice");
 //* now see in console there are two actions increment and decrement need to export that
-export const { increment, decrement, incrementfive, decrementfive } =
+export const { increment, decrement, incrementfive, decrementfive, reset } =
   counterSlice.actions;
 export default counterSlice.reducer;

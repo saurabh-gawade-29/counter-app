@@ -5,6 +5,7 @@ import {
   decrement,
   incrementfive,
   decrementfive,
+  reset,
 } from "./redux/features/counterSlice";
 
 //! Base Css
@@ -77,7 +78,15 @@ function App() {
         </div>
         <div className="my-2">
           <div className="row">
-            <div className="col-12 col-sm-12 col-md-6 col-lg-6 d-grid my-2">
+            <div className="col-12 col-sm-12 col-md-6 col-lg-4 d-grid my-2">
+              <button
+                className="btn btn-dark btn-block-primary"
+                onClick={() => dispatch(reset())}
+              >
+                Reset
+              </button>
+            </div>
+            <div className="col-12 col-sm-12 col-md-6 col-lg-4 d-grid my-2">
               <button
                 className="btn btn-dark btn-block-primary"
                 onClick={() => dispatch(decrementfive())}
@@ -85,7 +94,7 @@ function App() {
                 - 5
               </button>
             </div>
-            <div className="col-12 col-sm-12 col-md-6 col-lg-6 d-grid my-2">
+            <div className="col-12 col-sm-12 col-md-6 col-lg-4 d-grid my-2">
               <button
                 className="btn btn-dark btn-block-primary"
                 onClick={() => dispatch(incrementfive())}
